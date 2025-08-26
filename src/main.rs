@@ -50,7 +50,8 @@ fn handle_connection(mut stream: TcpStream) {
             }
 
             // Send a simple HTTP response
-            let response = "HTTP/1.1 200 OK\r\n\r\nHello from Rust!";
+            let response = "HTTP/1.1 200 OK\r\n\r\nHello from 
+                                                                        Rust!";
             stream.write_all(response.as_bytes()).unwrap();
         }
         Err(e) => println!("Failed to read from connection: {}", e),
